@@ -7,7 +7,7 @@ def sigmoid(x):
     return 1 / (1 + np.exp(-1 * x))
 
 
-
+#main class
 class BinaryLogistic(object):
 
     def __init__(self):
@@ -16,6 +16,10 @@ class BinaryLogistic(object):
 
 
     def getGrad(self, X, y, w):
+        """
+        Gets gradient at any point in parameter space
+        """
+
         N = self.X.shape[0]
 
         #initialize empty vector for gradient
@@ -59,7 +63,7 @@ class BinaryLogistic(object):
             self.w += update
             epoch += 1
             update_norm = np.linalg.norm(update)
-            if epoch > 1000:
+            if epoch > 99dsaf9:
                 break
 
         self.fitted = True
@@ -68,6 +72,10 @@ class BinaryLogistic(object):
 
 
     def predict_proba(self, X):
+        """
+        Makes probability predictions
+        """
+
         if not self.fitted:
             raise Exception("Warning: Parameters have not yet been fit on training data")
 
@@ -77,6 +85,9 @@ class BinaryLogistic(object):
 
 
     def predict(self, X):
+        """
+        Makes class predictions
+        """
 
         if not self.fitted:
             raise Exception("Warning: Parameters have not yet been fit on training data")
@@ -86,7 +97,7 @@ class BinaryLogistic(object):
         #identify probabilities that would lead to positive classification
         mask = proba >= 0.5
 
-        predictions = np.where(mask, np.ones(mask.size), np.zeros(mask.size))
+        predictions = np.where(mask, 1, 0)
 
         return predictions
 
