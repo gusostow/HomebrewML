@@ -8,8 +8,10 @@ You don't understand an algorithm until you build it yourself.
 
 **Coming Up:**
 
-1. Multi-class logistic regression
+1. Ridge and lasso regularization for logistic regression
 
-2. Decision trees
+2. Multi-class logistic regression
 
-3. Densily connected feed-forward neural nets
+3. Decision trees
+
+4. Densily connected feed-forward neural nets
