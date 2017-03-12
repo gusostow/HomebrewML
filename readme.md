@@ -1,6 +1,6 @@
 ### HomebrewML
 
-You don't understand an algorithm until you build it yourself.
+You don't understand an algorithm until you write it yourself.
 
 **Currently Implemented:**
 
