@@ -9,7 +9,7 @@ You don't understand an algorithm until you write it yourself.
 
 **Coming Up:**
 
-1. Ridge and lasso regularization for logistic regression
+1. Lasso regularization for logistic regression
 
 2. Multi-class logistic regression
 
