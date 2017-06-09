@@ -10,9 +10,10 @@ def sigmoid(x):
 #main class
 class BinaryLogistic(object):
 
-    def __init__(self):
+    def __init__(self, l2 = 0):
 
         self.fitted = False
+        self.l2 = l2
 
 
     def getGrad(self, X, y, w):
@@ -29,6 +30,8 @@ class BinaryLogistic(object):
 
         for i in range(grad.size):
             grad[i] = (-1.0 / N) * np.dot(delta.T, X[:, i])
+
+        grad += 2 * self.l2 * w
 
         return grad
 
@@ -63,7 +66,7 @@ class BinaryLogistic(object):
             self.w += update
             epoch += 1
             update_norm = np.linalg.norm(update)
-            if epoch > 99dsaf9:
+            if epoch > 999:
                 break
 
         self.fitted = True

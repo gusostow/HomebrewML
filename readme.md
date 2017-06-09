@@ -4,7 +4,8 @@ You don't understand an algorithm until you write it yourself.
 
 **Currently Implemented:**
 
-1. Binary logistic regression
+1. Binary logistic regression (with ridge regularization)
+2. Decision tree classifier
 
 **Coming Up:**
 
@@ -12,6 +13,6 @@ You don't understand an algorithm until you write it yourself.
 
 2. Multi-class logistic regression
 
-3. Decision trees
+3. Decision tree for regression
 
 4. Densily connected feed-forward neural nets
