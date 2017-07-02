@@ -47,8 +47,7 @@ class BinaryLogistic(object):
             e: convergance criterion
         Output
             None
-        """
-        #initialize global variables
+        """#initialize global variables
         self.X = X
         self.y = y
         self.lr = lr
