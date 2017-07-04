@@ -21,7 +21,7 @@ class SoftmaxClassifier(object):
 
     def fit(self, X, y):
         num_classes = np.unique(y).size
-        num_cols = X.shape[1]
+        num_cols = X.shape[1] + 1
         W = np.random.randn(num_cols, num_classes)
         X = np.column_stack((np.ones(X.shape[0]), X)) # bias column
 
